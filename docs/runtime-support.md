@@ -24,6 +24,17 @@ unmodified from the pinned official source with its `common` dependency at
 `64e233c096735551f6ac9a773726a8a3960e46cd`; those components are not part of this
 repository or a plugin release.
 
+## Verification
+
+The focused protocol check was demonstrated red with the intentional
+multi-command-rejection fault, then green without it. The plugin built with
+MSVC 19.51 and loaded successfully under F4SE 0.7.9 in one native session.
+Without keyboard input, `GetF4SEVersion` returned version 0.7.9; after freezing
+time and setting `GameHour` to 12.25, `GetGlobalValue GameHour` returned 12.25.
+This verifies dispatch and observable state change for that session, not every
+possible console command. The game was closed and temporary installation/profile
+changes restored after the check. No game output or artifacts are redistributed.
+
 Command changes never require recompilation. Supporting a new **game runtime**
 does require independent address and instruction-boundary verification and a new
 adapter build. Do not change the version/hash gate merely to make a DLL load.

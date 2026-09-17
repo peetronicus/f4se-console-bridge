@@ -8,7 +8,8 @@ is required.
 Experimental: initially supports the Steam Fallout 4 **1.11.240.0** executable
 identified in [runtime support](docs/runtime-support.md), with **F4SE 0.7.9**.
 Other executable identities are refused, including other builds with the same
-version label. Live verification is not yet complete.
+version label. A native integration session verified plugin loading, console
+version output, and setting then reading back a temporary global value.
 
 ## Safety and semantics
 
